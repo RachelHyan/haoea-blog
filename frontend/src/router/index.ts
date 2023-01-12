@@ -4,23 +4,27 @@ const routes: Array<RouteRecordRaw> = [
 	{
 		path: '/',
 		name: 'index',
+		redirect: { name: 'login' },
 		meta: {
 			title: '首页',
 			keepAlive: true,
 			requireAuth: true,
 		},
 		component: () => import('@/layout/default-layout.vue'),
+		children: [
+			{
+				path: "login",
+				name: "login",
+				component: () => import('@/views/login/index.vue'),
+				meta: {
+					title: '登录',
+					keepAlive: true,
+					requireAuth: false,
+				}
+			}
+		]
 	},
-	{
-		path: '/login',
-		name: 'login',
-		meta: {
-			title: '登录',
-			keepAlive: true,
-			requireAuth: false,
-		},
-		component: () => import('@/views/login/index.vue'),
-	}
+	
 ];
 
 const router = createRouter({

@@ -1,7 +1,9 @@
 <template>
 	<div class="default-layout"> 
 		<layout-sider />
-		<router-view />
+		<div class="default-layout-content">
+			<router-view />
+		</div>
 	</div>
 </template>
 
@@ -22,6 +24,15 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang="less">
+.default-layout {
+	display: flex;
+	background: #fff;
 
+	.default-layout-content {
+		flex: 1;
+		background: #000;
+		border-radius: 20px 0 0 20px;
+	}
+}
 </style>

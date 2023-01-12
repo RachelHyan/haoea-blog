@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
 
 </script>
 
@@ -7,5 +6,10 @@ import HelloWorld from './components/HelloWorld.vue'
   <RouterView />
 </template>
 
-<style scoped>
+<style lang="less">
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 </style>
