@@ -54,14 +54,12 @@ import { defineComponent, ref } from "vue";
 import API from "@/api";
 import {useUserStore} from '@/store/user';
 import {useNavsStore} from '@/store/navs';
-import { useRouter } from "vue-router";
 
 export default defineComponent({
 	name: "Login",
 	setup() {
 		const userStore = useUserStore();
 		const navsStore = useNavsStore();
-		const router = useRouter();
 		const bg = ref<HTMLElement | null>();
 		const container = ref<HTMLElement | null>();
 
